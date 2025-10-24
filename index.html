@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chris Hemsworth - Official Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="LOGO-removebg-preview.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Elfsight All-in-One Chat | Untitled All-in-One Chat -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-dfd09f88-291d-4ce1-bce8-8d2555c11d2e" data-elfsight-app-lazy></div>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    .hero-bg {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Chris_Hemsworth_by_Gage_Skidmore_2.jpg/640px-Chris_Hemsworth_by_Gage_Skidmore_2.jpg') center/cover no-repeat;
+    }
+
+    /* Slide down/up keyframes for mobile menu */
+    @keyframes slideDown {
+      0% { transform: translateY(-6px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-6px); opacity: 0; }
+    }
+    .animate-slide-down { animation: slideDown 210ms cubic-bezier(.16,.84,.24,1) forwards; }
+    .animate-slide-up { animation: slideUp 160ms cubic-bezier(.16,.84,.24,1) forwards; }
+
+    /* small visual tweak so mobile menu gets a soft rounded bottom */
+    .mobile-menu-rounded { border-bottom-left-radius: 0.75rem; border-bottom-right-radius: 0.75rem; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="site-header" class="fixed w-full z-50 bg-slate-900 bg-opacity-70 backdrop-blur-md">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <h1 class="text-2xl font-bold text-white">Chris Hemsworth</h1>
+
+      <!-- Hamburger Menu Button -->
+      <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-white focus:outline-none">
+        <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-indigo-400">About</a>
+        <a href="#services" class="hover:text-indigo-400">Services</a>
+        <a href="#portfolio" class="hover:text-indigo-400">Portfolio</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Nav (positioned directly under header; full-width) -->
+    <!-- Note: 'hidden' initially. When shown we remove 'hidden' and add animation class. -->
+    <div id="mobile-menu"
+         class="hidden md:hidden absolute left-0 right-0 top-full bg-slate-900 bg-opacity-95 text-center z-40 overflow-hidden mobile-menu-rounded"
+         style="transform-origin: top;">
+      <a href="#about" class="block py-3 border-b border-slate-800 hover:text-indigo-400">About</a>
+      <a href="#services" class="block py-3 border-b border-slate-800 hover:text-indigo-400">Services</a>
+      <a href="#portfolio" class="block py-3 border-b border-slate-800 hover:text-indigo-400">Portfolio</a>
+      <a href="#contact" class="block py-3 hover:text-indigo-400">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (offset so content isn't hidden under fixed header) -->
+  <main class="pt-20"> <!-- pt-20 creates space for fixed header -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center px-6">
+      <div class="bg-black bg-opacity-60 p-8 sm:p-10 rounded-2xl">
+        <h2 class="text-4xl sm:text-6xl font-bold mb-4">Actor • Producer • Fitness Advocate</h2>
+        <p class="text-lg sm:text-xl text-gray-300 mb-6">Inspiring strength, courage, and creativity through film and fitness.</p>
+        <a href="https://t.me/chris_hermsworth001" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">Book an Appointment</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-8 max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-6 text-indigo-400">About Chris Hemsworth</h3>
+      <p class="text-gray-300 leading-relaxed">
+        Chris Hemsworth is an award-winning Australian actor, widely recognized for his role as Thor in the Marvel Cinematic Universe. 
+        Beyond acting, he is a producer, fitness entrepreneur, and global ambassador for wellness and performance. 
+        Through his platform and fitness brand <strong>Centr</strong>, he inspires millions to live healthier, more balanced lives.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-slate-800 px-8">
+      <h3 class="text-3xl font-bold text-center text-indigo-400 mb-10">Services</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Film & Acting</h4>
+          <p class="text-gray-400">Leading roles in blockbuster films and television productions across genres.</p>
+        </div>
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Public Appearances</h4>
+          <p class="text-gray-400">Guest appearances at global events, brand promotions, and red-carpet functions.</p>
+        </div>
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Fitness & Wellness</h4>
+          <p class="text-gray-400">Collaborations and fitness advocacy through his wellness brand Centr.</p>
+        </div>
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Brand Endorsements</h4>
+          <p class="text-gray-400">Partnerships with global brands like TAG Heuer, BOSS, and Audi.</p>
+        </div>
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Production</h4>
+          <p class="text-gray-400">Film and TV production through his company, Wild State.</p>
+        </div>
+        <div class="p-6 bg-slate-900 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-3">Speaking Engagements</h4>
+          <p class="text-gray-400">Inspirational talks on fitness, resilience, and success in entertainment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20 px-8 max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-indigo-400 mb-10">Featured Works</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="73461f8c5e5e72616448d89a5aa72669.jpg" alt="Thor" class="rounded-2xl shadow-lg hover:scale-105 transition">
+        <img src="extract.jpg" alt="Extraction" class="rounded-2xl shadow-lg hover:scale-105 transition">
+        <img src="dbb19f24b564a3d8b426aa87ee8db918.jpg" alt="Rush" class="rounded-2xl shadow-lg hover:scale-105 transition">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-slate-800 px-8 text-center">
+      <h3 class="text-3xl font-bold text-indigo-400 mb-6">Get in Touch</h3>
+      <p class="text-gray-300 mb-8">For bookings, collaborations, or inquiries, contact Chris Hemsworth’s management team.</p>
+      <a href="mailto:chrishemsworth57392@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-lg font-semibold transition">Contact Management</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-center py-6 text-gray-400 text-sm">
+      © 2025 Chris Hemsworth. All Rights Reserved.
+    </footer>
+  </main>
+
+  <!-- Script for menu toggle with slide animations and click-outside close -->
+  <script>
+    (function () {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuOpenIcon = document.getElementById('menu-open');
+      const menuCloseIcon = document.getElementById('menu-close');
+      const header = document.getElementById('site-header');
+
+      // helper to show menu with animation
+      function openMenu() {
+        // remove any closing animation
+        mobileMenu.classList.remove('animate-slide-up');
+        // reveal then animate down
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('animate-slide-down');
+        menuOpenIcon.classList.add('hidden');
+        menuCloseIcon.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+
+        // remove animation class after it finishes so repeated opens work predictably
+        mobileMenu.addEventListener('animationend', function handler() {
+          mobileMenu.classList.remove('animate-slide-down');
+          mobileMenu.removeEventListener('animationend', handler);
+        });
+      }
+
+      // helper to hide menu with slide-up animation then actually hide
+      function closeMenu() {
+        // if already hidden, ensure icons are reset
+        if (mobileMenu.classList.contains('hidden')) {
+          menuOpenIcon.classList.remove('hidden');
+          menuCloseIcon.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          return;
+        }
+
+        // add slide-up animation, then hide after animation completes
+        mobileMenu.classList.remove('animate-slide-down');
+        mobileMenu.classList.add('animate-slide-up');
+        menuOpenIcon.classList.remove('hidden');
+        menuCloseIcon.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+
+        mobileMenu.addEventListener('animationend', function handler() {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('animate-slide-up');
+          mobileMenu.removeEventListener('animationend', handler);
+        });
+      }
+
+      // toggle behavior
+      menuBtn.addEventListener('click', (e) => {
+        if (mobileMenu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      // close menu on click outside (but ignore clicks inside the header/menu)
+      document.addEventListener('click', (e) => {
+        const target = e.target;
+        // if click is inside header or inside mobileMenu, ignore
+        if (header.contains(target) || mobileMenu.contains(target)) return;
+        // otherwise close
+        closeMenu();
+      });
+
+      // also close when a mobile menu link is clicked (so it collapses after selecting)
+      mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => closeMenu());
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      // Ensure the mobile menu is hidden when resizing to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          mobileMenu.classList.add('hidden');
+          menuOpenIcon.classList.remove('hidden');
+          menuCloseIcon.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
